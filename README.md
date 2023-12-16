@@ -1,6 +1,6 @@
 # StocksProject
 <p align="center">
-  <img src="./images/output.jpg" alt="Output">
+  <img src="images/output.jpg" alt="Output">
 </p>
 
 ## Description
@@ -11,7 +11,7 @@ website and writes them to an exel file...... TBD
 1. open Stocks.xlsx file and write stock's simbols to "Stocks Names" 
 sheet.
 <p align="center">
-  <img src="./images/stocks_excel.jpg" alt="Output">
+  <img src="images/stocks_excel.jpg" alt="Output">
 </p>
 
 2. save the excel and run "TLV_stocks.py"
@@ -20,7 +20,7 @@ sheet.
 the last 7 days.
 
 <p align="center">
-  <img src="./images/output.jpg" alt="Output">
+  <img src="images/output.jpg" alt="Output">
 </p>
 
 ## Requirements
