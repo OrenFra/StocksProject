@@ -1,15 +1,12 @@
 # Python version 3.7
 
-import bs4
-import requests
-from bs4 import BeautifulSoup
 import pandas as pd
-import numpy as np
-import csv
+
 import re, time
 import datetime
 from selenium import webdriver
 from tabulate import tabulate
+from bs4 import BeautifulSoup
 
 
 
@@ -54,12 +51,13 @@ def get_table_from_url(stock_name_to_num, prices, stock, try_num):
 
 
 def find_tlv_stock_price():
-    stock_list_df = pd.read_excel('Stocks_Oren.xlsx', sheet_name="Stock Names")
+    stock_list_df = pd.read_excel('Stocks.xlsx', sheet_name="Stock Names")
     stock_list = stock_list_df['Stocks'].tolist()
     stock_names = stock_list_df['Names'].tolist()
     stock_name_to_num = dict(zip(stock_names, stock_list))
     all_slocks = {}
     for stock in stock_names:
+        print(stock)
         web_df = pd.DataFrame(columns=['Date', 'Adj Close', 'Close', 'change', 'Open', 'Base', 'High', 'Low'])
         prices = []
         prices = get_table_from_url(stock_name_to_num, prices, stock, 0)
